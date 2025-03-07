@@ -14,6 +14,9 @@ importers:
       '@ai-sdk/react':
         specifier: ^1.1.21
         version: 1.1.21(react@19.0.0)(zod@3.24.2)
+      '@ai-sdk/xai':
+        specifier: ^1.1.13
+        version: 1.1.13(zod@3.24.2)
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
@@ -27,7 +30,7 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       framer-motion:
-        specifier: '11'
+        specifier: ^11.18.2
         version: 11.18.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       lucide-react:
         specifier: ^0.477.0
@@ -51,7 +54,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       remeda:
-        specifier: '2'
+        specifier: ^2.21.0
         version: 2.21.0
       shiki:
         specifier: ^3.1.0
@@ -99,6 +102,12 @@ importers:
 
 packages:
 
+  '@ai-sdk/openai-compatible@0.1.13':
+    resolution: {integrity: sha512-hgj6BdvasVXCTmJwbsiWo+e626GkmEBJKG8PYwpVq7moLWj93wJnfBNlDjxVjhZ32d5KGT32RIMZjqaX8QkClg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
   '@ai-sdk/openai@1.2.1':
     resolution: {integrity: sha512-UtVDNrmrKzb3b4T9bnpduXs4FKpWGn+sH5qaFP1mtxOPeYGUF9OoJfGilH3CNfqGAE4QdZh/LT3IV6GHacooGg==}
     engines: {node: '>=18'}
@@ -138,6 +147,12 @@ packages:
     peerDependenciesMeta:
       zod:
         optional: true
+
+  '@ai-sdk/xai@1.1.13':
+    resolution: {integrity: sha512-3v4ATVLrmSMbah9FJpHyWRKOLBAyQR9Hm7SNav5E6hmCJquwYgJy6EMGCtkjRtcemA/qBHpAmgNcqlb2uBLFBQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -2162,6 +2177,12 @@ packages:
 
 snapshots:
 
+  '@ai-sdk/openai-compatible@0.1.13(zod@3.24.2)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.10
+      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
+      zod: 3.24.2
+
   '@ai-sdk/openai@1.2.1(zod@3.24.2)':
     dependencies:
       '@ai-sdk/provider': 1.0.10
@@ -2197,6 +2218,13 @@ snapshots:
       '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
       zod-to-json-schema: 3.24.3(zod@3.24.2)
     optionalDependencies:
+      zod: 3.24.2
+
+  '@ai-sdk/xai@1.1.13(zod@3.24.2)':
+    dependencies:
+      '@ai-sdk/openai-compatible': 0.1.13(zod@3.24.2)
+      '@ai-sdk/provider': 1.0.10
+      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
       zod: 3.24.2
 
   '@alloc/quick-lru@5.2.0': {}

@@ -4,7 +4,7 @@ A modern chat application built with Next.js that supports rich messaging featur
 
 ## Features
 
-- 💬 Real-time chat messaging
+- 💬 Real-time chat messaging 
 - 📎 File attachment support
 - ✨ Markdown rendering in messages
 - 🔧 Tool invocation capabilities
